@@ -115,7 +115,7 @@ class Login extends Component {
                 if (dataPatient && dataPatient.success === true && dataPatient.message === 'login success') {
                     this.props.userLoginSuccess(dataPatient.user);
                     console.log(dataPatient)
-                    window.location.replace('http://localhost:3000/home')
+                    window.location.replace('https://medicalbookingcare.herokuapp.com/')
                 }
                 if (dataPatient && dataPatient.success === true && dataPatient.message ==='password false') {
                     this.setState({
