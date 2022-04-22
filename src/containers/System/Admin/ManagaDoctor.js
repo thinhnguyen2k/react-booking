@@ -94,7 +94,7 @@ class ManageDoctor extends Component {
         })
         let res = await getDetailInfoDoctor(selectedDoctor.value);
         console.log(res)
-        if(res && res.success === true && res.result && res.result[0].contentMarkdown){
+        if(res && res.success === true && res.result && res.result[0]?.contentMarkdown){
             // let markdown = res.infor.data.kMarkdown;
             this.setState({
                 contentHTML: res.result[0].contentHTML,
