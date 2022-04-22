@@ -8,6 +8,7 @@ import { getDetailPatient,
      getInfoBookingOnePatient, 
      getHistoryBookingOnePatient,
     getInfoPayment, 
+    SendEmailConfirm,
     ProcessPayment} from '../../../services/userService';
 import * as actions from '../../../store/actions';
 import { CRUD_ACTIONS, CommonUtils } from '../../../utils';
@@ -104,6 +105,7 @@ class Booking extends Component {
         }
     }
     handlebooking = () => {  
+        let temp = this.state.arrHistoryBooking.length - 1 
         if(this.state.selectedPayment.value === 1){
             this.props.createNewBooking({
                 idTime: this.props.match.params.idTime,
@@ -112,8 +114,10 @@ class Booking extends Component {
                 idSpecialist: this.state.detailDoctor.idSpecialist,
                 date: this.props.match.params.date,
                 idPayment: this.state.selectedPayment.value
-            })
-            window.location.replace('http://localhost:8888/order/create_payment_url')
+            },window.location.replace('http://localhost:8888/order/create_payment_url'))
+            // window.location.replace('http://localhost:8888/order/create_payment_url')
+            SendEmailConfirm(this.state.detailPatient.email,this.state.arrHistoryBooking[temp].idBooking)
+
         }
         else{
             this.props.createNewBooking({
