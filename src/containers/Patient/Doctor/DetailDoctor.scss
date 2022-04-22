@@ -1,0 +1,129 @@
+.doctor-detail-container {
+    margin: 20px 100px;
+    margin-top: 120px;
+    .intro-doctor{
+        display: flex;
+        // background-color: #b4fbb6;
+        // border: 0.5px solid #4caf50 ;
+        margin: 20px 0;
+        border-radius: 4px;
+        box-shadow: 0 0 2px #4caf50;
+        .content-left{
+            width: 40%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 10px 20px;
+        }  
+        .content-right{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            .up{
+                padding-top: 15px;
+                font-size: 20px;
+                font-weight: 600;
+                color: #4caf50;
+                // text-shadow: 0.5px 0.5px 0.5px gray;
+            }
+            .down {
+                padding-top: 10px;
+            }
+        }
+    }
+    .detail-infor-doctor{
+        border-right: 0.5px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 0 2px #4caf50;
+        padding: 4px;
+    }
+    .detail-info-celendar{
+        .detail-infor-day{
+            select{
+                width: 150px;
+                height: 32px;
+                border: none;
+                border-bottom: 0.5px solid;
+                color: #b4fbb6;
+                font-size: 20px;
+                outline: none;
+            }
+        }
+        .specialty-content-item-celender-content{
+            .specialty-content-item-celender-content{
+                margin-bottom: 4px;
+                width: 137px;
+                height: 40px;
+                background-color: #4caf50;
+                box-shadow: 0px 2px 2px #c0bdbd;
+                border-radius: 4px;
+                p{
+                    margin-top: 24px;
+                    font-size: 14px;
+                    font-family: auto;
+                    position: relative;
+                    top: 10px;
+                    right: -12px;
+                    color: white;
+                }
+                &:hover{
+                    box-shadow: 0 0.625rem 20px 0 rgba(0, 0,0, 0.5);
+                    transform: translateY(-1px);
+                    cursor: pointer;
+                }
+            }
+            .specialty-content-item-celender-content-disable{
+                margin-bottom: 4px;
+                width: 137px;
+                height: 40px;
+                background-color: #ccc;
+                box-shadow: 0px 2px 2px #c0bdbd;
+                border-radius: 4px;
+                p{
+                    margin-top: 24px;
+                    font-size: 14px;
+                    font-family: auto;
+                    position: relative;
+                    top: 10px;
+                    right: -12px;
+                }
+                &:hover{
+                    cursor: not-allowed;
+                }
+            }
+            
+        }
+        .detail-info-address{
+            border-top: 0.5px solid #ccc;
+            margin: 20px 0;
+            span{
+                font-size: 20px;
+                font-family: auto;
+            }
+            p{
+                font-size: 16px;
+                font-family: auto;
+                margin-bottom: 0rem;
+            }
+        }
+        .detail-info-price{
+            display: flex;
+            span{
+                font-size: 20px;
+                font-family: auto;
+            }
+            p{
+                font-size: 20px;
+                font-family: auto;
+                margin-bottom: 0rem;
+                color: #4caf50;
+                margin-right: 20px;
+            }
+        }
+        
+    }
+}

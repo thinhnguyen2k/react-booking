@@ -1,0 +1,117 @@
+.category-container{
+    width: 1335px;
+    margin: 0 auto;
+    margin-top: 80px;
+    .category-intro{
+        text-align: left;
+        .category-intro-item{ 
+            color: #4caf50;
+            font-size: 28px;
+            font-family: auto;
+            margin-top: 20px;
+            padding: 0;
+            font-weight: 100;
+        }
+        .border{ 
+            width: 420px;
+            height: 4px;
+            background-color: #4caf50;
+            margin-bottom: 20px;
+        }
+    }
+    .category-intro-slide{
+        height: 250px;
+        margin-left: -10px;
+    }
+ 
+    .category-sidebar{
+        // background-color: #b4fbb6;
+        height: 100%;
+        box-shadow: 0px 2px 2px #b4fbb6;
+        border: 0.5px solid #4caf50;
+        .category{
+            border-radius: 2px;
+        }
+        .category-sidebar-heading{
+            font-size: 28px;
+            color: #4caf50;
+            padding: 8px 4px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+            margin-top: 0;
+            font-family: auto;
+            font-weight: 100;
+            i{
+                margin-right: 12px;
+                font-size: 28px;
+            }
+        }
+        .category-list{
+           padding:0 0 8px 0;
+           list-style: none;
+           margin-left: 9px;
+        }
+        .category-item{
+            position: relative;
+            font-size: 24px;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.03);
+            font-family: auto;
+            &:hover{
+                right: -4px;
+                color: white;
+                background-color: #4caf50;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+    }
+    .category-content-list{
+        .category-content-list-item{
+            width: 95%;
+            margin: 0px auto;
+            margin-bottom: 24px;
+            height: 200px;
+            // background-color: #b4fbb6;
+            box-shadow: 0px 2px 2px #b4fbb6;
+            margin-left: 52px;
+            border: 0.5px solid #4caf50;
+            &:hover{
+                box-shadow: 0 0.625rem 20px 0 #b4fbb6;
+                transform: translateY(-0.5px);
+            }
+            .category-content-list-item-img{
+                // background-image: url('../../../assets/121042-than-kinh.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .category-content-list-item-desc{
+                .category-content-list-item-desc-title {
+                    font-size: 34px;
+                    font-family: auto;
+                    color: #4caf50;
+                    // text-shadow: 1px 1px 1px gray;
+                    
+                }
+                p{
+                    font-size: 16px;
+                    // color: grey;
+                }
+                .category-content-list-item-desc-btn{
+                    float: right;
+                    width: 140px;
+                    height: 40px;
+                    border: 0.5px solid #22c1c3;
+                    background-color: white;
+                    border-radius: 4px;
+                    font-size: 20px;
+                    font-family: auto;
+                    margin: -4px;
+                    &:hover{
+                        background-color:#22c1c3 ;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

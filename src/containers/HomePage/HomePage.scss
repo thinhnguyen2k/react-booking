@@ -1,0 +1,139 @@
+.section-share{
+    &.section-specialty{
+        background-color: #b4fbb6;
+    }
+    &.section-outstanding-doctor{
+        // background-color: #b4fbb6;
+
+    }
+    &.section-about{
+        height: 500px !important;
+    }
+    .section-body{
+        .section-customize{
+            .bg-image{
+                width: 330px;
+                height: 150px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: #eee;
+                box-shadow: 0 0 2px #4caf50;
+                &.section-specialty{
+                    // background-image: url('../../assets/specialty/tieuhoa.jpg');                  
+                }
+                &.section-medical-facilty{
+                    background-image: url('../../assets/facilty/benhvien.jpg');
+                }
+                &.section-outstanding-doctor{
+                    // background-image:url('../../assets/doctor/anh-dai-dien-bs.jpg') ;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                }
+                &.section-handbook{
+                    background-image: url('../../assets/handbook/141414-may-do-huyet-ap-omron-loai-nao-tot-1.jpg');
+                }
+            }
+        }
+    }
+}
+
+
+.section-share{
+    height: 330px;
+    .section-container{
+        margin: 0 100px; 
+        display: flex;
+        flex-direction: column;
+        .section-header{
+            height: 60px;
+            margin-bottom:30px ;
+            padding-top: 30px;
+            .title-section{
+                font-size: 28px;
+                // font-weight: 600;
+                font-family: 'Font Awesome 5 Free';
+
+            }
+            .btn-section{
+                float:right;
+                padding: 10px 15px;
+                border: none;
+                outline: none;
+                display: block;
+                background: #ebebeb;
+                color: black;
+                cursor: pointer;
+                &:hover{
+                    color: #fff;
+                    background: #4caf50;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.slick-prev:before,.slick-next:before{
+    font-family: FontAwesome !important;
+    color: red !important;
+}
+.slick-prev{
+   
+    left: -10px !important;
+    z-index: 100  !important;
+    height: 48px !important;
+    width:  44px !important;
+    background: #fff !important;
+    border: 2px solid #d7d7d7 !important;
+    &:hover{
+        background:#d7d7d7 !important ;
+    }
+}
+.slick-next{
+    
+    right: -10px !important;
+    z-index: 100  !important;
+    height: 48px !important;
+    width:  44px !important;
+    background: #fff !important;
+    border: 2px solid #d7d7d7 !important;
+    &:hover{
+        background:#d7d7d7 !important ;
+    }
+}
+.slick-disabled{
+    
+    display: none !important;
+}
+.section-outstanding-doctor{
+    .outer-bg{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .section-customize{
+        padding: 5px;
+        .customize-border{
+            border: 1px solid #4caf50;    
+            padding: 20px;
+
+        }
+    }
+}
+.home-footer{
+    // text-align: center;
+    padding-top: 8px;
+}
+.section-about{
+    margin: 0 100px;
+    .section-about-header{
+        padding: 20px 10px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+}

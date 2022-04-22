@@ -1,0 +1,182 @@
+.booking-container{
+    width: 1335px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    .booking-intro{
+        text-align: left; 
+        .booking-intro-item{
+            color: #4caf50;
+            font-size: 28px;
+            padding: 0;
+            font-family: auto;
+            // font-weight: 600;
+        }
+        .border{
+            width: 326px;
+            height: 4px;
+            background-color: #4caf50;
+            margin-bottom:20px;
+        }
+    }
+}
+.booking-left-overlay{
+    background-color: #b4fbb6;
+    border-radius: 4px;
+    .booking-info-doctor{
+        .booking-info-doctor-avt{
+            // background-image: url('../../../assets/155850-pgs-nguyen-tho-lo.jpg');
+            width: 300px;
+            height: 300px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 4px;
+            margin: 10px;
+            box-shadow: 0px 0px 2px #ccc;
+        }
+        .booking-info-doctor-desc{
+            .booking-info-doctor-desc-name{
+               
+                    margin: 0px 0px;
+                    text-align: center;
+                
+                span{
+                    font-size: 20px;
+                    color: #4caf50;
+                }
+                p{
+                    font-size: 18px;
+                    color: black;
+                }
+            }
+        }
+    }
+    .booking-info-booking{
+        .booking-info-booking-time{
+                text-align: center;
+            span{
+                font-size: 20px;
+                margin: 6px;
+                border: 1px solid #4caf50;
+            }
+            p{
+                font-size: 20px;
+                margin: 5px;
+                // color: #22c1c3;
+                border-top: 0.5px solid #4caf50;
+            }
+        }
+        .booking-info-booking-price{
+            height: 80px;
+            margin: 20px auto;
+            border: 1px solid #4caf50;
+            background-color: white;
+            border-radius: 4px;
+            text-align: center;
+            span{
+                font-size: 30px;
+                position: relative;
+                top: 16px;
+                color: #4caf50;
+            }
+        }
+        .patient-container-information{
+            table{
+                width: 25%;
+            }
+        }
+        .booking-button{
+            .btn-ok{ 
+                width: 140px;
+                 height: 40px;
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                border-radius: 2px;
+                box-shadow: 1px 1px 2px grey;
+                position: absolute;
+                right: 100px;
+            }
+        }
+    }
+    .booking-info-booking-btn{
+        display: flex;
+        justify-content: space-between;
+        .btnsucces{
+            border: none;
+            background-color: #4caf50;
+            width: 140px;
+            height: 40px;
+            border-radius: 4px;
+            font-size: 20px;
+            color: white;
+            &:hover{
+                cursor: pointer;
+                background-color: white;
+                color: #4caf50;
+                border: 0.5px solid #4caf50;
+            }
+        }
+        .btncancel{
+            border: none;
+            background-color: grey;
+            width: 140px;
+            height: 40px;
+            border-radius: 4px;
+            font-size: 20px;
+            color: white;
+            &:hover{
+                cursor: pointer;
+                background-color: white;
+                color: #4caf50;
+                border: 0.5px solid #4caf50;
+            }
+        }
+
+    }
+    .booking-info-payment{
+        span{
+            font-size: 20px;
+        }
+    }
+
+}
+.patient-container{
+    border: 0.5px solid #b4fbb6;
+    box-shadow: 0 0 2px #4caf50;
+    .patient-container-header{
+        text-align: center;
+        margin-bottom: 24px;
+        font-size: 24px;
+    }
+    .patient-container-booking{
+        .patient-container-booking-info{
+            text-align: left;
+            margin-left: 24px;
+            font-size: 22px;
+        }
+        .patient-container-booking-img{
+            background-image: url('../../../assets/logo2.png');
+            width: 300px;
+            height: 300px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            transform: rotate(25deg);
+        }
+    }
+    .patient-container-booking-history{
+        
+    }
+}
+.patient-container-information{
+    p{
+        font-size: 20px;
+        margin-left: 24px ;
+    }
+    .patient-container-information-table{
+      
+    }
+}

@@ -1,0 +1,61 @@
+.listdoctor-content-list{
+    display: flex;
+    flex-wrap: wrap;
+    .grid__column-2-4{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 25%;
+        padding-bottom: 10px;
+        .home-product-item{
+            position: relative;
+            display: block;
+            // margin-top: 10px;
+            text-decoration: none;
+            background-color: var(--white-color);
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,0.1);
+            transition: transform linear 0.1s;
+            will-change: transform;
+            border: 0.5px solid #4caf50;
+            .home-product-item__img{
+                padding-top: 100%;
+                background-repeat: no-repeat;
+                background-size: cover; 
+                background-position: center;
+            }
+            .home-product-item__name{
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: var(--text-color);
+                line-height: 1.8rem;
+                height: 3.6rem;
+                margin: 10px 10px 6px;
+                overflow: hidden;
+                display: block;
+                /* tao dau ba cham 2 dong */
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp:2;
+                /* chu khong bij xuong dong
+                text-overflow: ellipsis;
+                white-space: nowrap; */
+            }
+            .home-product-item__action{
+                display: flex;
+                justify-content: space-between;
+                margin: 6px 10px 0;    
+                .home-product-item__sold{
+                    font-size: 1rem;
+                    color: var(--text-color);
+                    margin-left: 6px;
+                }
+            }
+        }
+        .home-product-item:hover{
+            box-shadow: 0 0.625rem 20px 0 #b4fbb6;
+            transform: translateY(-1px);
+        }
+    }
+
+}

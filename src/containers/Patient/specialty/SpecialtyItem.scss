@@ -1,0 +1,148 @@
+.specialty-container{
+    .specialty-banner{
+        width: 100%;
+        height: 200px; 
+        // background-image: url('../../../assets/121042-than-kinh.jpg') ; 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .specialty-banner-opacity{
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9));
+            height: 100%;
+            box-shadow: 0 0 2px #4caf50;
+            margin-top: 80px;
+            .specialty-intro{
+                width: 1335px;
+                margin: 0 auto;
+                .specialty-title{
+                    font-size: 40px;
+                    font-family: auto;
+                    color: #4caf50;
+                    // text-shadow: 0.5px 0.5px 0.5px gray;
+                }
+                .specialty-description{
+                    font-size: 20px;
+                    font-family: auto;
+                }
+            }
+        }
+    }
+    .specialty-content{
+        width: 1335px;
+        margin: 20px auto;
+        .specialty-content-intro{
+            p{
+                font-size: 24px;
+                height: 40px;
+                color: #4caf50;
+                border-bottom: 1px solid #4caf50;
+                font-family: auto;
+            }
+        }
+        .specialty-content-item{ 
+            // background-color: #b4fbb6;
+            box-shadow: 0px 2px 2px #b4fbb6;
+            width: 100%;
+            margin: 20px 0;
+            // padding: 20px 0;
+            border-radius: 4px;
+            border: 0.5px solid #4caf50;
+            height: 175px;
+            .specialty-content-item-info{
+                width: 50%;
+                display: flex;
+                border-right: 0.5px solid gray;
+                justify-content: space-evenly;
+                height: 174px;
+                .specialty-content-item-info-avt{
+                    margin: 8px;
+                    width: 25%;
+                    height: 156px;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border-radius: 50%;
+                    // position: relative;
+                }
+                .specialty-content-item-info-description{
+                    width: 70%;
+                    span{
+                        color: #4caf50;
+                        font-size: 20px;
+                        font-family: auto;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: black
+                    }
+                }
+            }
+            .specialty-content-item-celender{
+                width: 50%;
+                .specialty-content-item-celender-header{
+                    i{
+                        font-size: 16px;
+                        color: #4caf50;
+                    }
+                    span{
+                        font-size: 16px;
+                        
+                    }
+                }
+                .medical_logo{
+                    background-image: url('../../../../src/assets/logo2.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 267px;
+                    height: 170px;
+                }
+                .specialty-content-item-celender-content{
+                    border-bottom: 0.5px solid gray;
+                    margin-bottom: 4px;
+                    .specialty-content-item-celender-content{
+                        width: 137px;
+                        height: 24px;
+                        background-color: white;
+                        box-shadow: 5px 5px 10px rgb(192, 189, 189);
+                        border-radius: 4px;
+                        p{
+                            margin: 10px;
+                        }
+                    }
+                }
+                .specialty-content-item-celender-price{
+                    // display: flex;
+                    span{
+                        margin-right: 20px;
+                        color: #4caf50;
+                        font-size: 24px;
+                        font-family: 'Font Awesome 5 Free';
+                    }
+                    p{
+                        font-size: 24px;
+                    }
+                }
+                .specialty-content-item-celender-btn-detail{
+                    height: 48px;
+                    width: 140px;
+                    outline: none;
+                    border: 0.5px solid white;
+                    background-color: #4caf50;
+                    border-radius: 4px;
+                    color: white;
+                    position: relative;
+                    top: -74px;
+                    font-family: auto;
+                    &:hover{
+                        background-color: white;
+                        color: #4caf50;
+                        border: 0.5px solid  #4caf50;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
+    }
+}
