@@ -136,7 +136,7 @@ export const createNewBooking = (data) => {
                 dispatch(saveBookingSuccess());
                 dispatch(fetchAllUserStart());
             } 
-            if (res && res.success === true && res.message ==='tontai') {
+            if (res && res.success === true && res.message ==='Dont booking') {
                 toast.warn('Không thể đặt cùng lúc 1 khung giờ với 2 bác sĩ, vui lòng chọn giờ khám khác!!!!!');
                 // dispatch(saveBookingSuccess());
                 dispatch(fetchAllUserStart());
