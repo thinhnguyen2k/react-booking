@@ -59,7 +59,9 @@ class DetailDoctor extends Component {
         if (inputData && inputData.length > 0) {
             inputData.map((item, index) => {
                 let object = {};
-                object.label = `${format(new Date(item.date), 'yyyy-MM-dd')}`;
+                // object.label = `${format(new Date(item.date), 'yyyy-MM-dd')}`;
+                object.label = `${format(new Date(item.day), 'yyyy-MM-dd')}`;
+
                 result.push(object)
 
             })

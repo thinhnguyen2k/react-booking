@@ -104,7 +104,7 @@ export const createNewUser = (data) => {
             let res = await createNewUserService(data);
             console.log('check', res)
             if (res && res.success === true) {
-                toast.success('Create new user success')
+                toast.success('Thêm mới người dùng thành công')
                 dispatch(saveUserSuccess());
                 dispatch(fetchAllUserStart());
             } else {
@@ -260,7 +260,7 @@ export const createSpeciatly = (data) => {
             let res = await createNewSpecialty(data);
             console.log('check', res)
             if (res && res.success === true) {
-                toast.success('Create new patient success')
+                toast.success('Tạo mới chuyên khoa thành công')
                 dispatch(saveSpecialtySuccess());
                 dispatch(fetchAllUserStart());
             } else {
