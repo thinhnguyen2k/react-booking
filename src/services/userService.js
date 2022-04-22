@@ -86,6 +86,16 @@ const getAllDoctors = () =>{
     // return axios.get(`/api/get-all-doctors`); 
     return axios.get(`/api/doctorinfo/getAllDoctor`);
 }
+
+//lay thong tin bs idrole = 3
+const getAllDoctorsFind = () =>{
+    // return axios.get(`/api/get-all-doctors`); 
+    return axios.get(`/api/doctorinfo/getAllDoctorFind`);
+}
+
+
+
+
 //tao them thong tin bac si
 const createDoctorInfo = (data) =>{ 
     return axios.post('/api/doctorinfo/add',data);
@@ -233,6 +243,7 @@ export {
     getInfoBookingOneDoctor,
     SendEmailConfirm,
     getInfoPayment,
-    ProcessPayment
+    ProcessPayment,
+    getAllDoctorsFind
 
 }

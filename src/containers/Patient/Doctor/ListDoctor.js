@@ -13,7 +13,7 @@ import ab5 from '../../../assets/about/ab1.jpeg';
 import ab6 from '../../../assets/about/ab2.jpeg';
 import ab7 from '../../../assets/about/ab3.jpeg';
 import ab8 from '../../../assets/about/ab4.jpeg';
-import { getAllSpecialist, getAllDoctors } from '../../../services/userService'
+import { getAllSpecialist, getAllDoctors,getAllDoctorsFind } from '../../../services/userService'
 
 const images = [
     ab1, ab2, ab3, ab4
@@ -36,7 +36,7 @@ class ListDocTor extends Component {
         await this.getAllSpecialist();
     }
     getAllListDoctor = async () => {
-        let response = await getAllDoctors();
+        let response = await getAllDoctorsFind();
         if (response && response.success === true) {
             this.setState({
                 listDoctors: response.result

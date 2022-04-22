@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Slider from 'react-slick';
 import * as actions from '../../../store/actions';
 import { withRouter } from 'react-router';
-import { getAllDoctors } from '../../../services/userService'
+import { getAllDoctors,getAllDoctorsFind } from '../../../services/userService'
 
 class OutStandingDoctor extends Component {
     constructor(props){
@@ -31,7 +31,7 @@ class OutStandingDoctor extends Component {
     }
 
     getAllListDoctor = async () => {
-        let response = await getAllDoctors();
+        let response = await getAllDoctorsFind();
         // console.log('kiem tra danh sach bac si', response)
         if (response && response.success === true) {
             this.setState({
