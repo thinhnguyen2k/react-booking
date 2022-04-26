@@ -172,7 +172,7 @@ class Login extends Component {
         return (
             <div class="login-reg-panel">
                 <div class="login-info-box">
-                    <div className='logo'></div>
+                    <div className='logo'> <a href='https://medicalbookingcare.herokuapp.com/home'></a></div>
                     <h2 style={{fontSize:'22px'}}>Bạn đã có tài khoản</h2>
                     <p>Đăng nhập tại đây</p>
                     <label id="label-register" for="log-reg-show">Đăng Nhập</label>
