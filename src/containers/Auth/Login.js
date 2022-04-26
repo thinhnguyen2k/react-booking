@@ -179,7 +179,7 @@ class Login extends Component {
                     <input type="radio" name="active-log-panel" id="log-reg-show" value="log-reg-show" />
                 </div>
                 <div class="register-info-box">
-                    <div className='logo'></div>
+                    <div className='logo'><a href='https://medicalbookingcare.herokuapp.com/home'></a></div>
                     <h2 style={{fontSize:'22px'}}>Bạn chưa có tài khoản</h2>
                     <p>Đăng kí tài khoản mới tại đây</p>
                     <label id="label-login" for="log-login-show">Đăng kí</label>
