@@ -64,7 +64,7 @@ class ManageHistory extends Component {
                                                     <td>{item.slotTime}</td>
                                                     <td>{item.date}</td>
                                                     <td>{item.namePatient}</td>
-                                                    <td>{item.active === 1 ? 'Đang xử lí' : 'Đã khám xong'}</td>
+                                                    <td>{item.active === 1 ? 'Đang xử lí' : 'đang chờ khám'}</td>
                                                 </tr>
                                             )
                                         })

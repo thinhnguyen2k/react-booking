@@ -5,6 +5,7 @@ import * as actions from '../../../store/actions';
 import './Dashboard.scss';
 import { getAllExamination, getOneDoctorTime } from '../../../services/userService'
 import HomeFooter from "../../HomePage/Section/HomeFooter";
+import BarChart from "../../../components/BarChart";
 
 class Dashboard extends Component {
     constructor(props) {
@@ -18,22 +19,31 @@ class Dashboard extends Component {
     }
 
 
+
     render() {
+
         let listTimeOfDoctor = this.state.listTimeOfDoctor
         console.log(listTimeOfDoctor)
+        
         return (
             <React.Fragment>
-                <div className='doctor-workshift-container'>
-                            <p><b>DASHBOARD</b></p>
+                {/* <div className='doctor-workshift-container'>
+                    <p><b>DASHBOARD</b></p>
                     <div className="row doctor-workshift-content ">
                         <div className="col-12">
                             <div className="row">
-                            <div className="col-12 dashboard_logo_right"></div>
+                                <div className="col-12 dashboard_logo_right"></div>
                             </div>
                         </div>
                     </div>
+                </div> */}
+                <div>
+                    {/* <canvas id="myChart"></canvas> */}
+                    <BarCharts/>
                 </div>
-                <HomeFooter/>
+                
+
+                <HomeFooter />
             </React.Fragment>
         )
     }

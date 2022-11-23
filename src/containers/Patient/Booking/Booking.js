@@ -16,6 +16,7 @@ import './Booking.scss'
 import HomeFooter from '../../HomePage/Section/HomeFooter';
 import Select from 'react-select';
 import { compareAsc, format } from 'date-fns'
+import { result } from 'lodash';
 class Booking extends Component {
 
     constructor(props) {
@@ -106,29 +107,38 @@ class Booking extends Component {
     }
     handlebooking = () => {  
         let temp = this.state.arrHistoryBooking.length - 1 
-        if(this.state.selectedPayment.value === 1){
-            this.props.createNewBooking({
-                idTime: this.props.match.params.idTime,
-                idStaff: this.props.match.params.idDoctor,
-                idPatient: this.props.match.params.id,
-                idSpecialist: this.state.detailDoctor.idSpecialist,
-                date: this.props.match.params.date,
-                idPayment: this.state.selectedPayment.value
-            },window.location.replace('http://localhost:8888/order/create_payment_url'))
-            // window.location.replace('http://localhost:8888/order/create_payment_url')
-            SendEmailConfirm(this.state.detailPatient.email,this.state.arrHistoryBooking[temp].idBooking)
+        // if(this.state.selectedPayment.value === 1){
+        //     this.props.createNewBooking({
+        //         idTime: this.props.match.params.idTime,
+        //         idStaff: this.props.match.params.idDoctor,
+        //         idPatient: this.props.match.params.id,
+        //         idSpecialist: this.state.detailDoctor.idSpecialist,
+        //         date: this.props.match.params.date,
+        //         idPayment: this.state.selectedPayment.value
+        //     },window.location.replace('http://localhost:8888/order/create_payment_url'))
+        //     // window.location.replace('http://localhost:8888/order/create_payment_url')
+        //     SendEmailConfirm(this.state.detailPatient.email,this.state.arrHistoryBooking[temp].idBooking)
 
-        }
-        else{
-            this.props.createNewBooking({
-                idTime: this.props.match.params.idTime,
-                idStaff: this.props.match.params.idDoctor,
-                idPatient: this.props.match.params.id,
-                idSpecialist: this.state.detailDoctor.idSpecialist,
-                date: this.props.match.params.date,
-                idPayment: this.state.selectedPayment.value
-            })
-        }
+        // }
+        // else{
+        //     this.props.createNewBooking({
+        //         idTime: this.props.match.params.idTime,
+        //         idStaff: this.props.match.params.idDoctor,
+        //         idPatient: this.props.match.params.id,
+        //         idSpecialist: this.state.detailDoctor.idSpecialist,
+        //         date: this.props.match.params.date,
+        //         idPayment: this.state.selectedPayment.value
+        //     })
+        // }
+        this.props.createNewBooking({
+            idTime: this.props.match.params.idTime,
+            idStaff: this.props.match.params.idDoctor,
+            idPatient: this.props.match.params.id,
+            idSpecialist: this.state.detailDoctor.idSpecialist,
+            date: this.props.match.params.date,
+            idPayment: 1
+        })
+        console.log(this.state.detailDoctor.idSpecialist)
     }
     handleChangePayment = async (selectedPayment) => {
         this.setState({
@@ -136,6 +146,8 @@ class Booking extends Component {
         })
 
     }
+
+    
     render() {
         let detailPatient = this.state.detailPatient;
         let detailDoctor = this.state.detailDoctor;
@@ -180,14 +192,14 @@ class Booking extends Component {
                                     <span>{detailDoctor.price} VND</span>
                                 </div>
                             </div>
-                            <div className='booking-info-payment'>
+                            {/* <div className='booking-info-payment'>
                                 <span>Chọn phương thức thanh toán</span>
                                 <Select
                                     value={this.state.selectedPayment}
                                     onChange={this.handleChangePayment}
                                     options={this.state.listPayment}
                                 />
-                            </div>
+                            </div> */}
                             <br/>
                             <div className='booking-info-booking-btn'>
                                 <button className='btnsucces'
