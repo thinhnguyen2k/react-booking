@@ -7,6 +7,7 @@ import ModelUser from './ModelUser';
 import ModalEditUser from './ModalEditUser';
 import { emitter } from '../../utils/emitter';
 import HomeFooter from '../HomePage/Section/HomeFooter';
+var Buffer = require('buffer/').Buffer
 class UserManage extends Component {
     constructor(props) {
         super(props)
@@ -103,22 +104,9 @@ class UserManage extends Component {
     }
     render() {
         let arrUsers = this.state.arrUsers
-        // console.log('check api',arrUsers);
+        console.log('check api',arrUsers);
         return (
             <div className="users-container"> 
-                {/* <ModelUser
-                    isOpen={this.state.isOpenModalUser}
-                    toggleFromParent={this.toggleUserModal}
-                    createNewUser={this.createNewUser}
-                /> 
-                {this.state.isOpenModalEditUser &&
-                    <ModalEditUser
-                        isOpen={this.state.isOpenModalEditUser}
-                        toggleFromParent={this.toggleUserEditModal}
-                        currentUser={this.state.userEdit}
-                        editUser={this.doEditUser}
-                    />
-                } */}
                 <div className='title text-center'>
                     DANH SÁCH NGƯỜI DÙNG
                 </div>
@@ -131,14 +119,13 @@ class UserManage extends Component {
                                 <th>Số Điện Thoại</th>
                                 <th>Địa chỉ</th>
                                 <th>Vị trí</th>
-                                <th>Hinh Anh</th>
+                                {/* <th>Hinh Anh</th> */}
                                 {/* <th>Quản lí</th> */}
                             </tr>
                             {
                                 arrUsers && arrUsers.map((item, index) => {
-                                    let imageBase64 = '';
-                                    imageBase64 = new Buffer(item.image,'base64').toString('binary')
-                                    // console.log(imageBase64)
+                                    // let imageBase64 = '';
+                                    // imageBase64 = new Buffer(item.image,'base64').toString('binary')
                                     return (
                                         <tr key={index}>
                                             <td>{item.email}</td>
@@ -152,11 +139,7 @@ class UserManage extends Component {
                                                         item.idRole === 2 ? 'NHAN VIEN' : ''
 
                                             }</td>
-                                            <td><img src = {imageBase64} style={{width:'50px' , height :'50px'}} /></td>
-                                            {/* <td>
-                                                <button className='btn-edit' onClick={() => this.handleEditUser(item)}><i className='fas fa-pencil-alt'></i></button>
-                                                <button className='btn-delete' onClick={() => this.handleDeleteUser(item)}><i className='fas fa-trash'></i></button>
-                                            </td> */}
+                                            {/* <td><img src = {imageBase64} style={{width:'50px' , height :'50px'}} /></td> */}
                                         </tr>
                                     )
                                 })
@@ -164,8 +147,18 @@ class UserManage extends Component {
                         </tbody>
                     </table>
                 </div>
+                <div style={
+                    {
+                        width:"100%",
+                        position:"fixed",
+                        bottom:0
+                    }
+                }>
                 <HomeFooter/>
+                </div>
+
             </div>
+             
         );
     }
 

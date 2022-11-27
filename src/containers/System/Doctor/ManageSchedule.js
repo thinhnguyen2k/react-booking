@@ -36,13 +36,13 @@ class ManageSchedule extends Component {
                 <div className='doctor-workshift-container'>
                     <div className="row doctor-workshift-content ">
                         <div className="col-12">
-                            <p><b> Lich kham benh ca nhan</b></p>
+                            <p><b> Lịch khám bệnh cá nhân</b></p>
                             <table id="customers">
                                 <tbody>
                                     <tr >
-                                        <th>Gio Kham</th>
-                                        <th>Ngay Kham</th>
-                                        <th>Ten Benh Nhan</th>
+                                        <th>Giờ khám</th>
+                                        <th>Ngày khám</th>
+                                        <th>Tên bệnh nhân</th>
                                     </tr>
                                     {
                                         arrinfoBooking && arrinfoBooking.map((item, index) => {

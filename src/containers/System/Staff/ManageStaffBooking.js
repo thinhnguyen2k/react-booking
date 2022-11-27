@@ -60,16 +60,16 @@ class ManageSchedule extends Component {
                 <div className='doctor-workshift-container'>
                     <div className="row doctor-workshift-content ">
                         <div className="col-12">
-                            <p><b> Lich kham benh </b></p>
+                            <p><b> Lịch khám bệnh </b></p>
                             <table id="customers">
                                 <tbody>
                                     <tr >
-                                        <th>Ma ho so</th>
-                                        <th>Gio Kham</th>
-                                        <th>Ngay Kham</th>
-                                        <th>Ten Benh Nhan</th>
-                                        <th>Bac Si</th>
-                                        <th>Trang thai</th> 
+                                        <th>Mã hồ sơ</th>
+                                        <th>Giờ khám</th>
+                                        <th>Ngày khám</th>
+                                        <th>Tên bệnh nhân</th>
+                                        <th>Bác sĩ</th>
+                                        <th>Trạng thái</th> 
                                     </tr>
 
                                     {arrBooking && arrBooking.map((item, index) => {

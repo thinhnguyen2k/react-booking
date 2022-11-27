@@ -1,5 +1,13 @@
 export const adminMenu = [
     { //quan li nguoi dung
+        name: 'Dashboard',
+        menus: [
+            {
+                name: 'Thống Kê', link: '/system/statistical'
+            }, 
+        ]
+    },
+    { //quan li nguoi dung
         name: 'Người dùng',
         menus: [
             {

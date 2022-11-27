@@ -16,14 +16,14 @@ class ManageSpecialty extends Component {
             previewImg: '',
             description: '',
             arrSpecialty: [],
-            avatar:''
+            avatar: ''            
         }
     }
     async componentDidMount() {
         await this.getAllSpecialist();
     }
     componentDidUpdate(preProps, preState, snapshot) {
-
+        
     }
     handleOnchangeImage = async (e) => {
         let data = e.target.files;
@@ -40,7 +40,7 @@ class ManageSpecialty extends Component {
     handleSaveUser = () => {
         let isValid = this.checkValidateInput();
         if (isValid === false) return;
- 
+
         let { action } = this.state;
         console.log(this.state)
         this.props.createSpeciatly({
@@ -49,8 +49,15 @@ class ManageSpecialty extends Component {
             description: this.state.description,
             image: this.state.avatar
         })
-
     }
+
+    // handleDeleteSpecialist = (arrSpecialty) => {
+
+    // }
+
+    // handleEditSpecialist = (arrSpecialty) => {
+
+    // }
 
     checkValidateInput = () => {
         let isValid = true;
@@ -58,7 +65,7 @@ class ManageSpecialty extends Component {
         for (let i = 0; i < arrCheck.length; i++) {
             if (!this.state[arrCheck[i]]) {
                 isValid = false;
-                alert('nhap day du thong tin')
+                alert('Nhập đầy đủ thông tin')
                 break
             }
         }
@@ -96,15 +103,50 @@ class ManageSpecialty extends Component {
             this.setState({
                 arrSpecialty: response.result
             })
-
-
         }
         // console.log('get user from node.js', response.result)
     }
+
+    // updateSpecialist = async () => {
+    //     let response = await this.updateSpecialist()
+    //     if (response && response.success === true) {
+    //         this.setState({
+    //             specialistEdit: response.result
+    //         })
+    //     }
+    // }
+    // handleInputChange = (event) => {
+    //     const target = event.target;
+    //     const value = target.value;
+    //     const name = target.name;
+    //     this.setState({
+    //         [name]: value
+    //     });
+    // }
+
+    // handleInput = (item) =>{
+    //     this.setState({
+    //         id: item.idSpecialist,
+    //         departmentName: item.departmentName,
+    //         price: item.price,
+    //         // image: item.image,
+    //         description: item.description
+    //     })
+    // }
+
+
+    // handleEditSpecialist = (user) => {
+    //     let navigate = useNavigate()
+    //     const initialInputValues = {
+
+    //     }
+    // }
+
+
     render() {
         let arrSpecialty = this.state.arrSpecialty
         console.log('cejc', arrSpecialty)
-        let { departmentName, price, description} = this.state
+        let { departmentName, price, description } = this.state
         return (
             <div className='user-redux-container'>
                 <div className="title" >
@@ -140,6 +182,7 @@ class ManageSpecialty extends Component {
                                 <label>Hình ảnh đại diện</label>
                                 <div className='preview-img-container'>
                                     <input id='previewImg' type='file' hidden
+                                        // value={image}
                                         onChange={(e) => this.handleOnchangeImage(e)}
                                     />
                                     <label className='label-upload' htmlFor='previewImg'> Tải Ảnh <i className='fas fa-upload'></i></label>
@@ -170,34 +213,43 @@ class ManageSpecialty extends Component {
                                             <th>Mô tả chuyên khoa</th>
                                             <th>Giá dịch vụ</th>
                                             <th>Hình ảnh</th>
+                                            {/* <th>Sửa</th>
+                                            <th>Xóa</th> */}
+
                                         </tr>
                                         {
                                             arrSpecialty && arrSpecialty.map((item, index) => {
                                                 let imageBase641 = '';
-                                                imageBase641 = new Buffer(item.image,'base64').toString('binary')
+                                                imageBase641 = new Buffer(item.image, 'base64').toString('binary')
                                                 console.log(item.image)
                                                 return (
-                                                    <tr key = { index } >
+                                                    <tr key={index} >
                                                         <td>{item.idSpecialist}</td>
                                                         <td>{item.departmentName}</td>
                                                         <td>{item.description}</td>
                                                         <td>{item.price} VND</td>
-                                                        <td><img src = {imageBase641} style={{width:'50px' , height :'50px'}} /></td>
+                                                        <td><img src={imageBase641} style={{ width: '50px', height: '50px' }} /></td>
+                                                        {/* <td>
+                                                            <button className="btn-edit" onClick={() => this.handleInput(item)}><i className='fas fa-pencil-alt'></i> </button>
+                                                        </td>
+                                                        <td>
+                                                            <button className="btn-delete" onClick={() => this.handleDeleteSpecialist(item)}><i className='fas fa-trash'></i> </button>
+                                                        </td> */}
                                                     </tr>
-                                    )
+                                                )
                                             })
                                         }
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <HomeFooter/>
+                <HomeFooter />
             </div >
-            
+
         )
-    } 
+    }
 }
 const mapStateToProps = state => {
     return {

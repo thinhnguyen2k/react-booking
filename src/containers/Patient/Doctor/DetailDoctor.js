@@ -10,6 +10,7 @@ import { getAllExamination, getOneDoctorTime,getAllDayDoctor,getAllTimeInDayDoct
 import { withRouter } from 'react-router';
 import Select from 'react-select';
 import { compareAsc, format } from 'date-fns'
+var Buffer = require('buffer/').Buffer
 class DetailDoctor extends Component {
 
     constructor(props) { 
@@ -93,7 +94,7 @@ class DetailDoctor extends Component {
     render() {
         let { detailDoctor, listTimeOfDoctor,listAllDayDoctor } = this.state;
         let userInfo = this.props.userInfo;
-        console.log(listTimeOfDoctor)
+        console.log(detailDoctor.contentHTML)
         let id = this.state.id
         let imageBase64 = '';
         if (detailDoctor.image) {
@@ -106,8 +107,7 @@ class DetailDoctor extends Component {
                     isShowBanner={false}
                 />
                 <div className='doctor-detail-container'>
-                    {detailDoctor && detailDoctor && detailDoctor.contentHTML
-                        &&
+                    {detailDoctor ?
                         <div className='intro-doctor'>
                             <div
                                 className='content-left'
@@ -127,13 +127,16 @@ class DetailDoctor extends Component {
                                 </div>
                             </div>
                         </div>
+                       
+                        :
+                        null
                     }
                     <div className='schedule-doctor'>
                     </div>
                     <div className='row'>
                         <div className=' col-6 '>
                             <div className='detail-infor-doctor'>
-                                {detailDoctor && detailDoctor && detailDoctor.contentHTML
+                                {detailDoctor && detailDoctor.contentHTML
                                     &&
                                     <div dangerouslySetInnerHTML={{ __html: detailDoctor.contentHTML }}>
                                     </div>

@@ -10,6 +10,7 @@ import ManageSpecialty from '../containers/System/Admin/ManageSpecialty/ManageSp
 import ManageTime from '../containers/System/Admin/ManageTime/ManageTime';
 import Dashboard from '../containers/System/Dashboard/Dashboard';
 import ManageHistory from '../containers/System/Admin/ManageHistory/ManageHistory';
+import Statistical from '../containers/System/Staff/chart/statistical'
 class System extends Component { 
     render() {
         const { systemMenuPath,isLoggedIn } = this.props;
@@ -20,6 +21,7 @@ class System extends Component {
                     <div className="system-list">
                         <Switch>
                             <Route path="/system/dashboard" component={Dashboard} />
+                            <Route path="/system/statistical" component={Statistical} />
                             <Route path="/system/user-manage" component={UserManage} />
                             <Route path="/system/user-redux" component={UserRedux} />
                             <Route path="/system/manage-doctor" component={ManagaDoctor} />

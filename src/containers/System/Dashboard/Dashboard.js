@@ -24,10 +24,10 @@ class Dashboard extends Component {
 
         let listTimeOfDoctor = this.state.listTimeOfDoctor
         console.log(listTimeOfDoctor)
-        
+
         return (
             <React.Fragment>
-                {/* <div className='doctor-workshift-container'>
+                <div className='doctor-workshift-container'>
                     <p><b>DASHBOARD</b></p>
                     <div className="row doctor-workshift-content ">
                         <div className="col-12">
@@ -36,15 +36,15 @@ class Dashboard extends Component {
                             </div>
                         </div>
                     </div>
-                </div> */}
-                <div>
-                    {/* <canvas id="myChart"></canvas> */}
-                    <BarCharts/>
                 </div>
-                
+                {/* <div> */}
+                {/* <canvas id="myChart"></canvas> */}
+                {/* <BarCharts/> */}
+                {/* <button type="button"></button> */}
+                {/* </div> */}
 
                 <HomeFooter />
-            </React.Fragment>
+            </React.Fragment >
         )
     }
 }
